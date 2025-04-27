@@ -11,9 +11,9 @@ import Projects from './Projects';
 function App() {
 
   return (
-    <Container className="h-100 vw-100">
+    <Container className="min-vw-100">
       <Row>
-        <Col>
+        <Col className="p-0">
           <Header />
         </Col>
       </Row>
@@ -23,6 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects/>} />
+              <Route path="*" element={<Home />} />
             </Routes>
           </BrowserRouter>
         </Col>
