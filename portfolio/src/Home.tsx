@@ -5,11 +5,11 @@ function Home() {
     return (
         <Container className="pt-5 mt-5">
             <Row className="align-items-center">
-                <Col xs={3}>
+                <Col md={{span:3, offset:1}}>
                     <Image className="h-25" src="public/profile.jpg" roundedCircle fluid />
                 </Col>
 
-                <Col>
+                <Col md={{ offset: 1}}>
                     <Card>
 
                         <Card.Body><Card.Text>
