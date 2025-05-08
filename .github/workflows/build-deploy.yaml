@@ -26,8 +26,7 @@ jobs:
           node-version: 20 # Or the Node.js version you use
 
       - name: Install dependencies
-        run: npm ci # Use npm ci for clean installation in CI environments
-
+        run: npm i
       - name: Build React app
         run: npm run build # Runs your build script
 
