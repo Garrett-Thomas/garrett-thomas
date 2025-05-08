@@ -5,6 +5,25 @@ function Projects() {
 
     useEffect(() => {
 
+        // Not sure but Drone sim wants to rename title. This is a dirty hack to name it back
+        let title = Array.from(document.getElementsByTagName('title'))[0];
+
+        const config = { attributes: true, childList: true, subtree: true };
+
+        const callback = function (mutationsList: MutationRecord[], observer: MutationObserver) {
+            for (let mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    title.text = "G&T";
+                }
+            }
+        };
+
+        // Create an observer instance linked to the callback function
+        const observer = new MutationObserver(callback);
+
+        // Start observing the target node for configured mutations
+        observer.observe(title, config);
+
         const setup = document.createElement('script');
         const droneJS = document.createElement('script');
 
