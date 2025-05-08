@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './Home';
 import Home from './Home';
 import Header from './components/Header';
@@ -18,13 +18,11 @@ function App() {
       </Row>
       <Row>
         <Col>
-          <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects/>} />
               <Route path="*" element={<Home />} />
             </Routes>
-          </BrowserRouter>
         </Col>
       </Row>
     </Container>
