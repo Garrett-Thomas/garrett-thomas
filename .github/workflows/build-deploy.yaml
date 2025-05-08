@@ -27,7 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-      - name: Build React app
+      - name: Build Vite App
         run: npm run build # Runs your build script
 
       - name: Upload Pages artifact
