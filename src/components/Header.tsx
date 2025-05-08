@@ -11,7 +11,7 @@ function Header() {
 
         <Navbar expand="lg" className="bg-body-tertiary w-100">
             <Container>
-                <Navbar.Brand href="/">Home</Navbar.Brand>
+                <Link className="navbar-brand" to="/">Home</Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
