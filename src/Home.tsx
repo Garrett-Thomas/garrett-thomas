@@ -1,15 +1,16 @@
 import { Image, Row, Col, Container, Card } from "react-bootstrap";
+import profile from "../public/profile.jpg";
 
 function Home() {
 
     return (
         <Container className="pt-5 mt-5">
             <Row className="align-items-center">
-                <Col md={{span:3, offset:1}}>
-                    <Image className="h-25" src="public/profile.jpg" roundedCircle fluid />
+                <Col md={{ span: 3, offset: 1 }}>
+                    <Image className="h-25" src={profile} roundedCircle fluid />
                 </Col>
 
-                <Col md={{ offset: 1}}>
+                <Col md={{ offset: 1 }}>
                     <Card>
 
                         <Card.Body><Card.Text>
