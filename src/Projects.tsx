@@ -10,7 +10,7 @@ function Projects() {
 
         const config = { attributes: true, childList: true, subtree: true };
 
-        const callback = function (mutationsList: MutationRecord[], observer: MutationObserver) {
+        const callback = function (mutationsList: MutationRecord[]) {
             for (let mutation of mutationsList) {
                 if (mutation.type === 'childList') {
                     title.text = "G&T";
@@ -32,9 +32,9 @@ function Projects() {
 
         droneJS.defer = true;
         droneJS.async = true;
+
         document.body.appendChild(setup);
         document.body.appendChild(droneJS);
-
     }, []);
 
     function handleContextMenu(e: { preventDefault: () => void; }) {
